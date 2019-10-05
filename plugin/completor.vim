@@ -47,6 +47,7 @@ let g:completor_doc_position = get(g:, 'completor_doc_position', 'bottom')
 let g:completor_def_split = get(g:, 'completor_def_split', '')
 let g:completor_complete_options = get(g:, 'completor_complete_options', 'menuone,noselect,preview')
 let g:completor_filetype_map = extend(s:default_type_map, get(g:, 'completor_filetype_map', {}))
+let g:completor_use_popup_window = get(g:, 'completor_use_popup_window', 1)
 
 
 func s:init()
