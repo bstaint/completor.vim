@@ -97,9 +97,7 @@ class Filename(Completor):
     ident = r"""[@a-zA-Z0-9(){}$+_~.'"\x80-\xff-\[\]]*"""
 
     def match(self, input_data):
-        if self.is_comment_or_string():
-            return bool(self.trigger.search(input_data))
-        return False
+        return bool(self.trigger.search(input_data))
 
     def _path(self, base):
         pat = list(PAT.finditer(base))
